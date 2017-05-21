@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -19,7 +20,7 @@ public class DriversLicense {
     String organDonor;
     String idClass;
 
-
+    public DriversLicense(){}
     public DriversLicense(String LastName, String firstName, String addr, String state,
                           String licenseNumber, String DOB, String issueDate, String expireDate,
                           String sex, String eyeColor, String height, String organDonor, String idClass){
@@ -37,6 +38,18 @@ public class DriversLicense {
         this.Height = height;
         this.organDonor = organDonor;
         this.idClass = idClass;
+    }
+
+    public static ArrayList<DriversLicense> deserializeFromCSV(String e){
+        ArrayList<DriversLicense> deserializedList = new ArrayList();
+        e.split("")
+
+        return deserializedList;
+    }
+
+
+    public static void getCSVHeader(){
+
     }
 
     public static List<DriversLicense> serializeToCSV(){
