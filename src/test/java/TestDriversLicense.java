@@ -33,15 +33,15 @@ public class TestDriversLicense {
 
         String expectedState = "NJ";
         String expectedAddress = "876 Zion Dr";
-        String expectedFirstName = "Traven";
+        String expectedLastName = "Traven";
         //: When
         String actualState = dl.deserializeFromCSV(csvFile).get(1).getState();
         String actualAddress = dl.deserializeFromCSV(csvFile).get(5).getAddr();
-        String  actualFirstName = dl.deserializeFromCSV(csvFile).get(7).getFirstName();
+        String  actualLastName = dl.deserializeFromCSV(csvFile).get(7).getLastName();
         //: Then
         Assert.assertEquals("The expected state should return NJ",expectedState,actualState);
         Assert.assertEquals("The expected address should return 876 Zion Dr", expectedAddress,actualAddress);
-        Assert.assertEquals("The expected name should return Traven", expectedFirstName, actualFirstName);
+        Assert.assertEquals("The expected name should return Traven", expectedLastName, actualLastName);
     }
 
     @Test

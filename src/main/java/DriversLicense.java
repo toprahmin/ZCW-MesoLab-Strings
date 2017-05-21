@@ -40,10 +40,17 @@ public class DriversLicense {
         this.idClass = idClass;
     }
 
+
     public static ArrayList<DriversLicense> deserializeFromCSV(String e){
         ArrayList<DriversLicense> deserializedList = new ArrayList();
-        e.split("")
-
+        String[] licenseArray = e.split("\n");
+        String[] tempArray;
+        for(int i = 0; i < licenseArray.length; i++){
+             tempArray = licenseArray[i].split(",");
+            deserializedList.add(new DriversLicense(tempArray[0],tempArray[1],tempArray[2],
+                    tempArray[3], tempArray[4], tempArray[5],tempArray[6],tempArray[7],tempArray[8],tempArray[9],
+                    tempArray[10],tempArray[11],tempArray[12]));
+        }
         return deserializedList;
     }
 
